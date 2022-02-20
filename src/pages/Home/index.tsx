@@ -14,8 +14,8 @@ const Home: React.FC = () => {
             <p>Good Vibes</p>
             <img src={candyText} alt="Candy" />
           </div>
-        <a href="/">Shipping Free</a>
-        <a href="/">Shipping</a>
+          <a href="/free-shipping">Free Shipping</a>
+          <a href="/shipping">Shipping</a>
       </main>
 
       <ImageContainer />

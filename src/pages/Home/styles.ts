@@ -73,7 +73,7 @@ export const ImageContainer = styled.image`
   height: 100vh;
   width: 1200px;
   background: #6D72F0 url(${candyImage}) no-repeat center;
-  background-size: auto;
+  background-size: contain;
   flex: 1;
 `;
 

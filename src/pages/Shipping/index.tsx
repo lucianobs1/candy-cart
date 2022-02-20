@@ -3,7 +3,9 @@ import React from 'react';
 // import { Container } from './styles';
 
 const Shipping: React.FC = () => {
-  return <div />;
+  return (
+    <h1>Hello Shipping</h1>
+  );
 }
 
 export default Shipping;
