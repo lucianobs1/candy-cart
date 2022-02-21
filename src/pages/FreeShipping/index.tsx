@@ -15,9 +15,9 @@ const FreeShipping:React.FC = () => {
   const [candies, setCandies] = useState<Candy[]>([]);
 
   useEffect(() => {
-    fetch('api/items')
+    fetch('api/products')
     .then(response => response.json())
-    .then(data => setCandies(data.items));
+    .then(data => setCandies(data.products));
   }, [])
 
   
