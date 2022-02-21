@@ -1,5 +1,6 @@
 import React from 'react';
-import Cart from '../../components/Cart';
+import { CartItem } from '../../components/CartItem';
+
 import { Container } from './styles';
 
 const FreeShipping:React.FC = () => {
@@ -11,8 +12,8 @@ const FreeShipping:React.FC = () => {
         </header>
 
         <ul>
-           <Cart />
-           <Cart />
+           <CartItem />
+           <CartItem />
         </ul>
 
         <div className='payment-container'>
@@ -22,7 +23,9 @@ const FreeShipping:React.FC = () => {
           </div>
         </div>
 
-        <button type='button'>Finalizar compra</button>
+        <div className='button-container'>
+          <button type='button'>Finalizar compra</button>
+        </div>
       </Container>
     </>
   );
