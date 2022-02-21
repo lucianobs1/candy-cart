@@ -4,19 +4,19 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  color: #fff;
+  color: #000;
 
   header {
     text-align: center;
     padding: 16px 16px;
-    border-bottom: 1px solid #B9BCC7;
+    border-bottom: 1px solid #cbcbcb;
   }
 
   ul {
     margin: 32px auto;
     max-width: 500px;
     width: 100%;
-    padding: 32px 16px;
+    padding: 16px 16px;
 
     li {
       display: flex;
@@ -25,6 +25,22 @@ export const Container = styled.div`
 
       & + li {
         margin-top: 24px;
+      }
+
+      .image-box {
+        background-color: #fff;
+        border: 1px solid #cbcbcb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 150px;
+        max-height: 130px;
+        padding: 6px;
+        
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
 
       strong {
@@ -42,18 +58,13 @@ export const Container = styled.div`
         color: #B9BCC7;
         font-weight: bold;
       }
-
-      img {
-        height: 110px;
-        width: 110px;
-      }
-    }
+    } 
   }
 
   .payment-container {
     width: 100%;
-    border-bottom: 1px solid #fff;
-    border-top: 1px solid #fff;
+    border-bottom: 1px solid #cbcbcb;
+    border-top: 1px solid #cbcbcb;
 
     div {
       max-width: 500px;
@@ -64,6 +75,23 @@ export const Container = styled.div`
 
       padding: 32px 16px;
     }
+
+    .shipping-message-box {
+      background-color: #C7FFA6;
+      max-width: 400px;
+      margin: 0 auto;
+      margin-bottom: 32px;
+      padding: 8px;
+      width: 100%;
+      border-radius: 9999px;
+
+    p {
+      color: #217A00;
+      font-weight: bold;
+      margin: 0 auto;
+    }
+  }
+
   }
 
   .button-container {

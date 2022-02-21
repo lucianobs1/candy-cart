@@ -1,15 +1,32 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { CartItem } from '../../components/CartItem';
 
 import { Container } from './styles';
 
+interface Candy {
+  id: string;
+  name: string;
+  imageUrl: string;
+  price: number;
+  sellingPrice: number;
+}
+
 const FreeShipping:React.FC = () => {
+  const [candies, setCandies] = useState<Candy[]>([]);
 
   useEffect(() => {
     fetch('api/items')
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(data => setCandies(data.items));
   }, [])
+
+  
+  const amount = 0;
+
+  const total = candies.reduce(
+    (previousValue, currentValue) => previousValue += currentValue.sellingPrice,
+    amount
+  ) / 100;
 
   return (
     <>
@@ -19,22 +36,34 @@ const FreeShipping:React.FC = () => {
         </header>
 
         <ul>
-           <CartItem />
-           <CartItem />
-           <CartItem />
-           <CartItem />
+        {candies.map(candy =>  {
+          return (
+            <CartItem key={candy.id} item={candy} />
+          )
+        })}
         </ul>
 
         <div className='payment-container'>
           <div>
             <strong>Total</strong>
-            <strong>R$9,55</strong>
+            <strong>{new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+          }).format(total)}</strong>
           </div>
+
+         { total > 10 && (
+            <div className='shipping-message-box'>
+              <p>Parabéns, sua compra tem frete grátis !</p>
+            </div>
+         )}
+
         </div>
 
         <div className='button-container'>
           <button type='button'>Finalizar compra</button>
         </div>
+
       </Container>
     </>
   );

@@ -1,14 +1,31 @@
 import React from 'react';
 
+interface ItemsProps {
+  item: {
+    id: string;
+    name: string;
+    imageUrl: string;
+    price: number;
+    sellingPrice: number;
+  }
+}
 
-const CartItem: React.FC = () => {
+const CartItem: React.FC<ItemsProps> = ({ item }) => {
   return (
     <li>
-      <img src='https://www.drogariaminasbrasil.com.br/media/product/029/bombom-garoto-serenata-de-amor-unidade-20g-3b8.jpg' alt="candy" />
+      <div className='image-box'>
+        <img src={item.imageUrl} alt={item.name} />
+      </div>
       <div>
-        <strong>Trufa de morango</strong>
-        <p>R$ 1,23</p>
-        <span>R$ 1,11</span>
+        <strong>{item.name}</strong>
+        <p>{new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+          }).format(item.price/100)}</p>
+        <span>{new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+          }).format(item.sellingPrice/100)}</span>
       </div>
     </li>
   )
