@@ -68,7 +68,7 @@ export const Container = styled.div`
       }
 
       span {
-        color: #B9BCC7;
+        color:#8f8f8f;
         font-weight: bold;
       }
     } 
