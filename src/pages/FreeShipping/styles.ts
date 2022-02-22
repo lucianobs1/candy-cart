@@ -1,15 +1,28 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   color: #000;
 
   header {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 16px 16px;
     border-bottom: 1px solid #cbcbcb;
+    gap: 8px;
+
+
+    a {
+      display: flex;
+      align-items: center;
+      transition: color 0.6s;
+
+      &:hover {
+        color: #3B74F2;
+      }
+    }
   }
 
   ul {
@@ -109,6 +122,12 @@ export const Container = styled.div`
       width: 100%;
       height: 48px;
       border-radius: 8px;
+
+      transition: filter 0.6s;
+
+      &:hover {
+        filter: brightness(0.6);
+      }
     }
   }
 `;

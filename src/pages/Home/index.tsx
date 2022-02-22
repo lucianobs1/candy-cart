@@ -10,10 +10,11 @@ const Home: React.FC = () => {
         <h1>Candy Store</h1>
           <div className='candy-text-box'>
             <img src={candyText} alt="Candy" />
-            <strong>Good Candy</strong> 
+            <strong>Good Candy,</strong> 
             <p>Good Vibes</p>
             <img src={candyText} alt="Candy" />
           </div>
+          
           <a href="/free-shipping">Free Shipping</a>
           <a href="/shipping">Shipping</a>
       </main>

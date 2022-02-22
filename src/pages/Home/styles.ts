@@ -43,19 +43,23 @@ export const Container = styled.div`
     p {
       margin-left: 6px;
     }
+  }
 
+          
     a {
       text-decoration: none;
       color: #fff;
       background: #6D72F0;
       font-weight: 700;
       text-transform: uppercase;
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 2rem;
       transition: filter 0.6s;
+      width: 180px;
+      text-align: center;
 
       & + a {
-        margin-top: 2rem;
+        margin-top: 1rem;
       }
 
       &:hover {
@@ -66,7 +70,6 @@ export const Container = styled.div`
         background-color: #F96361;
       }
     }
-  }
 `;
 
 export const ImageContainer = styled.image`

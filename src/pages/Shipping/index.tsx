@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { FiArrowLeft } from 'react-icons/fi';
 import { CartItem } from '../../components/CartItem';
 
 import { Container } from './styles';
@@ -31,7 +32,10 @@ const Shipping:React.FC = () => {
   return (
     <>
       <Container>
-        <header>
+      <header>
+          <a href="/">
+            <FiArrowLeft size={24}/>
+          </a>
           <h2>Meu carrinho</h2>
         </header>
 

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { FiArrowLeft } from 'react-icons/fi';
 import { CartItem } from '../../components/CartItem';
 
 import { Container } from './styles';
+
 
 interface Candy {
   id: string;
@@ -19,7 +21,7 @@ const FreeShipping:React.FC = () => {
     .then(response => response.json())
     .then(data => setCandies(data.products));
   }, [])
-
+  
   
   const amount = 0;
 
@@ -28,10 +30,13 @@ const FreeShipping:React.FC = () => {
     amount
   ) / 100;
 
-  return (
+    return (
     <>
       <Container>
         <header>
+          <a href="/">
+            <FiArrowLeft size={24}/>
+          </a>
           <h2>Meu carrinho</h2>
         </header>
 
