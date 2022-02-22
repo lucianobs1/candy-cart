@@ -1,6 +1,6 @@
 # candy-cart
 
-![Api apresentation](https://github.com/lucianobs1/login-project/blob/main/api-gif.gif)
+![Api apresentation](https://github.com/lucianobs1/candy-cart/blob/main/candy_cart.gif)
 
 ## :rocket: Technologies
 - ReactJS
