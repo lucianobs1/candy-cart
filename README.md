@@ -9,12 +9,13 @@
 - Styled Components
 - MirageJs
 
-```
-### Follow the steps below to run frontend
-```
+## Follow the steps below to run frontend
+
  # Install the dependencies
+```
  $ yarn
- 
+```
  # Run
+```
  $ yarn dev
  ```
