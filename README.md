@@ -1,7 +1,7 @@
 # candy-cart - Website 
 
 ## The project
-### Developed project to use one fake api using MirageJs, The objective is get all candies in api and calculate, if the total is greater than 10  shipping is free
+#### Developed project to use one fake api using MirageJs, The objective is get all candies in api and calculate, if the total is greater than 10  shipping is free
 
 ![Api apresentation](https://github.com/lucianobs1/candy-cart/blob/main/candy_cart.gif)
 
